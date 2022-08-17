@@ -19,7 +19,7 @@ csl: apa.csl
 
 ## Preamble
 
-The first version of the simulation engine was a package called DSsim [@dssimpkg]; with improving GIS capabilities in R we have later released a second more efficient simulation package, dsims [@dsimspkg]. This vignette was originally written for DSsim and so we use it now to not only demonstrate dsims but also as an example for users of DSsim showing how to transition to dsims. As the two packages have largely the same function names loading them together is not advised, this vignette will therefore leave the DSsim code in as comments for comparison with the dsims code. Please note that normal comments follow a single # and DSsim code follows double ##. It should also be noted that dsims now uses the distance sampling survey design package, dssd [@dssdpkg], to generate the transects based on the users specified design so that shapefiles containing the transects no longer need to be created in advance. 
+The first version of the simulation engine was a package called DSsim [@dssimpkg]; with improving GIS capabilities in R we have later released a second more efficient simulation package, dsims [@dsimspkg]. This vignette was originally written for DSsim and so we use it now to not only demonstrate dsims but also as an example for users of DSsim showing how to transition to dsims. As the two packages have largely the same function names loading them together is not advised, this vignette will therefore leave the DSsim code in as comments for comparison with the dsims code. Please note that normal comments follow a single # and DSsim code follows double ##. It should also be noted that dsims now uses the distance sampling survey design package, dssd [@dssdpkg], to generate the transects based on the design so that shapefiles containing the transects no longer need to be created in advance. 
 
 If your goal is to transition to dsims from DSsim then you will find all you need in the sections up to and including the section on running simulations. The latter sections go on to run a series of additional simulations investigating pooling robustness and covariate parameter estimation with respect to truncation distance. If you are completely new to distance sampling simulations then an alternative place to start is the Getting Started vignette inside the dsims package. This vignette uses dsims to compare a systematic parallel design with a zigzag design to assess the accuracy/precision trade off. To view this open R and after installing dsims, enter the following code:
 
@@ -721,7 +721,7 @@ As these simulations take a substantial amount of time to run we have saved the 
 run.simulation(sim.cov, run.parallel = TRUE, max.cores = 7)
 ```
 
-Once they have been downloaded and unzipped ito a sub folder called results the results and summaries can be loaded as follows:
+Once they have been downloaded and unzipped into a sub folder called results the results and summaries can be loaded as follows:
 
 ```{r loadresults, eval = TRUE, echo = TRUE}
 
